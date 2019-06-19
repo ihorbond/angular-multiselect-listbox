@@ -1,0 +1,16 @@
+<div class="row multiselect-listbox-body">
+    <ul [ngClass]="{'scrollable': scrollable}">
+        <li class="row" *ngFor="let oneItem of items;trackBy: trackByFn"
+            [ngClass]="{'li-selected': oneItem.checked}"
+            (click)="onClickCallback(items, oneItem.id)">
+            <div class="col-md-1">
+                <input type="checkbox" [checked]="oneItem.checked" />
+            </div>
+            <div class="col-md-11">
+                <span class="item-description">
+                    {{oneItem.description}}
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

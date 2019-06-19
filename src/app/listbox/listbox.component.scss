@@ -1,0 +1,33 @@
+@import '../listbox-selector/shared-styles';
+
+.li-selected {
+    background-color: $li-background-color
+}
+
+.multiselect-listbox-body {
+    ul {
+        width: 100%;
+        height: $view-height;
+        padding: 0 0.5px;
+        list-style: none;
+        border: 1px solid $border-color;
+
+        li {
+            padding: 5px 0;
+            border-bottom: 1px solid $border-color;
+            cursor: pointer;
+
+            .item-description {
+                cursor: inherit;
+            }
+        }
+
+        li:hover {
+            background-color: $li-background-color;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+    }
+}

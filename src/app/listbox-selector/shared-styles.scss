@@ -1,0 +1,21 @@
+$view-height: 55vh;
+$border-color: #ccc;
+$li-background-color: #F5F5F5;
+
+input[type=checkbox] {
+    cursor: pointer;
+    font-weight: bold;
+    width: 1.3em;
+    height: 1.3em;
+    display: inline-block;
+    background-color: #fff;
+    visibility: visible;
+}
+
+.row {
+    margin: 0;
+}
+
+.scrollable {
+    overflow-y: auto;
+}

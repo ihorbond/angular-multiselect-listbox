@@ -1,0 +1,39 @@
+<div class="{{cssClass}}">
+
+        <!--left list-->
+        <div class="col-md-5">
+            <div class="row multiselect-listbox-header">
+                <div class="col-md-1">
+                    <input type="checkbox" [(ngModel)]="checkAllItemsLeftFlag" (click)="checkAll($event.srcElement.checked, leftListItems)" />
+                </div>
+                <div class="col-md-11">
+                    <span class="item-description">
+                        <b>{{leftListTitle}}</b>
+                    </span>
+                </div>
+            </div>
+            <app-listbox [items]="leftListItems" [onClickCallback]="onListItemClick.bind(this)"></app-listbox>
+        </div>
+
+        <!--middle-->
+        <div class="col-md-2 list-controls-middle no-padding">
+            <button type="submit" class="btn btn-default" (click)="moveItems(moveDirection.Right)"><i class="fa fa-angle-right fa-2x"></i></button>
+            <button type="submit" class="btn btn-default" (click)="moveItems(moveDirection.Left)"><i class="fa fa-angle-left fa-2x"></i></button>
+        </div>
+
+        <!--right list-->
+        <div class="col-md-5">
+            <div class="row multiselect-listbox-header">
+                <div class="col-md-1">
+                    <input type="checkbox" [(ngModel)]="checkAllItemsRightFlag" (click)="checkAll($event.srcElement.checked, rightListItems)"/>
+                </div>
+                <div class="col-md-11">
+                    <span class="item-description">
+                        <b>{{rightListTitle}}</b>
+                    </span>
+                </div>
+            </div>
+            <app-listbox [items]="rightListItems" [onClickCallback]="onListItemClick.bind(this)"></app-listbox>
+        </div>
+
+</div>

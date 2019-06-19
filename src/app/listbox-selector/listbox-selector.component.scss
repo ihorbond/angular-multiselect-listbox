@@ -1,0 +1,33 @@
+@import 'shared-styles';
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.multiselect-listbox-header {
+    padding: 5px 0;
+    border: 1px solid $border-color;
+    border-bottom: none;
+}
+
+%list-controls {
+    height: $view-height + 5vh;
+
+    button {
+        margin: 10px auto;
+        display: block;
+        position: static;
+    }
+
+    button:first-child {
+        margin-top: $view-height/3 + 5vh;
+    }
+}
+
+.list-controls-middle {
+    @extend %list-controls;
+}
+
+.item-description {
+    cursor:default;
+}
